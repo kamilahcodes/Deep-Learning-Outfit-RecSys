@@ -1,0 +1,53 @@
+{% include 'base/base.html' %}
+{% load static %}
+
+{%block content%}
+<div class="container">
+	<div class="row">
+		<div class="col">
+		<img src="{{product.image.url}}" class="rounded" style="height:475px; width:360px;" />
+		
+		</div>
+
+		 	 
+
+			<div class="col">
+		 	<h2> {{product.name}} </a> </h1>
+		    <h3> {{product.price}} </h2>
+		    <h5 class="text-muted"> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin vel eros eget lorem fringilla molestie id eu sem. Integer sed hendrerit odio, sed pharetra tortor. </h4>
+		    <button type="button" class="btn btn-primary btn-lg"> Add to Cart </button>
+			</div>
+
+</div>
+</div>
+
+<div class="container">
+
+
+
+		
+		<h2 class="text-center py-3"> Recommendations </h2>
+	
+		<div class="row">
+			<div class="col">
+			
+			  <img src="{{rec1.image.url}}" class="rounded" style="height:400px; width:260px;" />
+			  <h5> <a href="/products/{{rec1.id}}">{{rec1.name}} </a></h5>
+			  <h5> {{rec1.price}}</h5>
+			 
+			</div>
+
+			<div class="col">
+		
+			  <img src="{{rec2.image.url}}" class="rounded" style="height:400px; width:260px;" />
+			   <h5>  <a href="/products/{{rec2.id}}">{{rec2.name}} </a></h5>
+			   <h5> {{rec2.price}}</h5>
+			</div>
+		</div>
+
+
+
+	</div>
+</div>
+
+{%endblock%}

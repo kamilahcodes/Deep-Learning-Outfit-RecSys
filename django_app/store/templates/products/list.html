@@ -1,0 +1,30 @@
+
+{% include 'base/base.html' %}
+
+{% load static %}
+
+{%block content%}
+<div class="container">
+
+	<div class="row">
+	
+		{% for product in allproducts %}
+
+
+		<div class="col">
+		<img src="{{product.image.url}}" class="rounded" style="height:415px; width:266px;" />
+		<h5> <a href="/products/{{product.id}}" >{{product.name}} </a> </h5>
+		<h5 > {{product.price}} </h5>
+		   
+ 
+	
+		</div>
+
+
+		{%endfor %}
+
+
+	</div>
+
+</div>
+{%endblock%}
